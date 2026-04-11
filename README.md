@@ -36,7 +36,7 @@ happ://crypt5/hfqaUsMKTR3ZONKm4y181r5XNx13hprjsYpHAQ7DfJ01/G6H739GUEp4MHKiUSerb6
 - 7 нажмите на кнопку подключения
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/3.jpg" alt="3" width="50%" height="auto">
 
-- 8 убедитесь, что сервер работает! Для этого нажмите кнопку "проверить текщее соединение"
+- 8 убедитесь, что сервер работает! Для этого нажмите кнопку "проверить текущее соединение"
 - 9 Положительный ответ имеет числовое значение
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/4.jpg" alt="3" width="50%" height="auto">
 
