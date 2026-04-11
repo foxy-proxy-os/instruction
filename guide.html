@@ -154,14 +154,14 @@
             transform: scale(0.96);
         }
 
-        /* картинки */
+        /* картинки — все теперь 50% ширины */
         .instruction-img {
             margin: 1.2rem 0;
             text-align: center;
         }
 
         .instruction-img img {
-            max-width: 100%;
+            width: 50%;
             height: auto;
             border-radius: 1.2rem;
             border: 1px solid #f9731680;
@@ -211,6 +211,13 @@
         hr {
             border-color: #f9731640;
             margin: 1rem 0;
+        }
+
+        /* для мобилок можно чуть увеличить картинки, но не более 70% */
+        @media (max-width: 640px) {
+            .instruction-img img {
+                width: 70%;
+            }
         }
     </style>
 </head>
@@ -320,7 +327,7 @@
 
     <footer>
         <hr>
-        <p>FoxyProxy 🦊 • Актуальная инструкция 2025 • Работаем даже там, где обычный интернет не справляется</p>
+        <p>FoxyProxy 🦊 • Актуальная инструкция 2026 • Работаем даже там, где обычный интернет не справляется</p>
         <p style="margin-top: 6px;">🔗 <a href="https://github.com/foxy-proxy-os/instruction" target="_blank" style="color:#facc15;">Репозиторий с инструкцией</a></p>
     </footer>
 </div>
