@@ -27,7 +27,7 @@ happ://crypt5/hfqaUsMKTR3ZONKm4y181r5XNx13hprjsYpHAQ7DfJ01/G6H739GUEp4MHKiUSerb6
 - 1 перейдите в настройки
 - 2 далее в "подписки"
 - 3 убедитесь, что автообновление включено
-- 4 обязательно включите сортировку по пингу.
+- 4 обязательно включите сортировку по пингу
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/2.jpg" alt="3" width="50%" height="auto">
 
 ## Для стабильного подключения:
@@ -36,8 +36,8 @@ happ://crypt5/hfqaUsMKTR3ZONKm4y181r5XNx13hprjsYpHAQ7DfJ01/G6H739GUEp4MHKiUSerb6
 - 7 нажмите на кнопку подключения
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/3.jpg" alt="3" width="50%" height="auto">
 
-- 8 убедитесь, что сервер работает! Для этого нажмите кнопку "проверить текщее соединение".
-- 9 Положительный ответ имеет числовое значение.
+- 8 убедитесь, что сервер работает! Для этого нажмите кнопку "проверить текщее соединение"
+- 9 Положительный ответ имеет числовое значение
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/4.jpg" alt="3" width="50%" height="auto">
 
 ## Настройка основной подписки.
