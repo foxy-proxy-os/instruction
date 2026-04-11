@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>HAPP Proxy | Инструкция для обхода блокировок</title>
+    <title>FoxyProxy 🦊 | Инструкция для подключения</title>
     <style>
         * {
             margin: 0;
@@ -13,64 +13,68 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #0a0f1e 0%, #0c1222 100%);
-            color: #eef2ff;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b2e 100%);
+            color: #f0f4ff;
             line-height: 1.5;
             padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
         }
 
         /* Карточки */
         .card {
-            background: rgba(18, 25, 45, 0.7);
-            backdrop-filter: blur(4px);
-            border-radius: 2rem;
+            background: rgba(25, 30, 50, 0.75);
+            backdrop-filter: blur(5px);
+            border-radius: 1.8rem;
             padding: 1.8rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(72, 187, 255, 0.2);
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
-            transition: transform 0.2s ease;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(255, 120, 50, 0.25);
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+            transition: transform 0.2s ease, border-color 0.2s;
         }
 
         .card:hover {
-            border-color: rgba(72, 187, 255, 0.5);
+            border-color: rgba(255, 120, 50, 0.6);
+            transform: translateY(-2px);
         }
 
+        /* Заголовок */
         h1 {
-            font-size: 1.8rem;
-            background: linear-gradient(120deg, #fff, #7ac7ff);
+            font-size: 1.9rem;
+            background: linear-gradient(120deg, #fff, #f97316, #facc15);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             margin-bottom: 0.75rem;
+            display: inline-block;
         }
 
-        .badge {
-            background: #1e2a4a;
-            padding: 0.3rem 0.8rem;
+        .badge-fox {
+            background: #f97316;
+            color: #1e1b2e;
+            padding: 0.3rem 1rem;
             border-radius: 40px;
             font-size: 0.8rem;
-            color: #9acdff;
+            font-weight: bold;
             display: inline-block;
-            margin-bottom: 1.2rem;
+            margin: 0.5rem 0 1rem 0;
         }
 
         h2 {
             font-size: 1.6rem;
-            margin: 1.5rem 0 1rem 0;
+            margin: 1.2rem 0 1rem 0;
             font-weight: 600;
-            border-left: 5px solid #3b82f6;
+            border-left: 5px solid #f97316;
             padding-left: 1rem;
         }
 
         h3 {
             font-size: 1.3rem;
             margin: 1rem 0 0.75rem 0;
-            color: #cbdffc;
+            color: #ffd6a5;
         }
 
         /* Кнопки платформ */
@@ -85,72 +89,74 @@
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: #111827;
+            background: #1e293b;
             padding: 0.85rem 1.5rem;
             border-radius: 60px;
             text-decoration: none;
             font-weight: 600;
             color: white;
             transition: all 0.2s;
-            border: 1px solid #2d3a5e;
+            border: 1px solid #f9731640;
             font-size: 1rem;
         }
 
         .btn-primary {
-            background: #1e3a8a;
-            border-color: #3b82f6;
-            box-shadow: 0 2px 8px rgba(59,130,246,0.3);
+            background: #ea580c;
+            border-color: #facc15;
+            box-shadow: 0 2px 10px rgba(234, 88, 12, 0.4);
         }
 
         .btn-primary:hover {
-            background: #2563eb;
+            background: #f97316;
             transform: translateY(-2px);
         }
 
         .btn:hover {
-            background: #1f2937;
+            background: #334155;
             transform: translateY(-1px);
         }
 
-        /* Стиль для shell ссылки */
+        /* Блок со ссылкой */
         .link-box {
-            background: #0a0f1a;
+            background: #0f111a;
             border-radius: 1.2rem;
             padding: 1rem;
             margin: 1.2rem 0;
-            border: 1px solid #2d3748;
+            border: 1px solid #f9731660;
             word-break: break-all;
         }
 
         .link-url {
             font-family: 'SF Mono', 'Fira Code', monospace;
-            font-size: 0.85rem;
-            color: #a0c4ff;
-            background: #00000040;
-            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: #ffb47b;
+            background: #00000060;
+            padding: 0.6rem;
             border-radius: 1rem;
             display: block;
             margin-bottom: 0.8rem;
         }
 
         .copy-btn {
-            background: #2d3748;
+            background: #f97316;
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 2rem;
             color: white;
+            font-weight: bold;
             font-size: 0.8rem;
             cursor: pointer;
-            transition: 0.1s;
+            transition: 0.15s;
         }
 
         .copy-btn:active {
-            background: #3b82f6;
+            background: #c2410c;
+            transform: scale(0.96);
         }
 
         /* картинки */
         .instruction-img {
-            margin: 1rem 0;
+            margin: 1.2rem 0;
             text-align: center;
         }
 
@@ -158,128 +164,164 @@
             max-width: 100%;
             height: auto;
             border-radius: 1.2rem;
-            border: 1px solid #2d3e6e;
-            background: #0f1422;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+            border: 1px solid #f9731680;
+            background: #0b0e16;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.6);
         }
 
-        .ping-note {
-            background: #0f172a;
+        .info-note {
+            background: #1e1a2f;
             padding: 0.8rem 1.2rem;
             border-radius: 1rem;
-            margin: 0.8rem 0;
-            border-left: 4px solid #22c55e;
+            margin: 1rem 0;
+            border-left: 5px solid #facc15;
+        }
+
+        .warning-note {
+            background: #2d1f1a;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            border-left: 5px solid #f97316;
+        }
+
+        .step-list {
+            margin: 1rem 0 0 1.5rem;
+            list-style-type: none;
+        }
+
+        .step-list li {
+            margin: 0.6rem 0;
+            counter-increment: step-counter;
+        }
+
+        .step-list li::before {
+            content: "🔸 ";
+            color: #facc15;
+            font-weight: bold;
         }
 
         footer {
             text-align: center;
             margin-top: 2rem;
             font-size: 0.8rem;
-            color: #5f7fae;
+            color: #a29bcf;
         }
 
         hr {
-            border-color: #1e2a4a;
+            border-color: #f9731640;
             margin: 1rem 0;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 0;
-            }
-            .card {
-                padding: 1.2rem;
-            }
-            .btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- заголовок -->
+    
+    <!-- Шапка -->
     <div class="card" style="text-align: center;">
-        <h1>🌐 Инструкция для тех, у кого “интернет” не работает через “интернет”</h1>
-        <div class="badge">⚡ Рабочий метод с HAPP Proxy</div>
-        <p style="margin-top: 12px;">Используйте безопасное подключение, даже когда стандартный доступ ограничен.</p>
+        <h1>🦊 Инструкция для подключения к FoxyProxy 🛡️</h1>
+        <div class="badge-fox">⚡ Стабильный обход блокировок</div>
+        <p style="margin-top: 12px;">Надёжный способ оставаться онлайн, даже когда доступ ограничен.</p>
     </div>
 
     <!-- 1. Установка HAPP -->
     <div class="card">
         <h2>📦 1. Установка приложения HAPP</h2>
-        <p>Выберите вашу платформу и нажмите для установки:</p>
+        <p>Выберите вашу платформу:</p>
         <div class="platform-grid">
             <a href="https://www.happ.su/main/ru" target="_blank" class="btn btn-primary">🌍 Официальный сайт</a>
             <a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" target="_blank" class="btn">🖥️ Windows</a>
             <a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" class="btn">📱 Google Play</a>
             <a href="https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973" target="_blank" class="btn">📱 iOS/macOS</a>
         </div>
-        <p style="margin-top: 1rem;"><strong>📋 Скопируйте ссылку (кликабельна):</strong></p>
+        <p><strong>📋 Скопируйте ссылку для подключения (временная подписка):</strong></p>
         <div class="link-box">
             <div class="link-url" id="proxyLink">happ://crypt5/hfqaUsMKTR3ZONKm4y181r5XNx13hprjsYpHAQ7DfJ01/G6H739GUEp4MHKiUSerb6vavhZgXbxJfokmCAvpNaK+Z0Kr1xWZqEbORTheNnZp57pYz1/DQ2qlpBxYYGN3mJDXazi7KIgQV74qtL4m6dsvcuFLFGyfn3AirdSfeLPdxla16c4kCdf8K4zWLrNUnF0CXM+T==LQiAf8dsxCPu4CyOXNr1iRvIt+DWgg7z7+jS0vhZ1USZ5QcP1W8UObQwKhwIF07qsvZNhA5RF+569BFq1oCz1rna2RFW7CBUgkXNv9OvbCMjLvgsS/51pEcfkM+sbvqRcCRvHmVNkTR+WfRZI98tnOJyvzxCmJNwjVH5RqYiTSGTyiDkDfbqLlruH1WZWe51KKdVg6IT+kaRaqn2nBsCo1zlwp/mMqSXHNQ5hw2pG+HR0z3ceZum3dSc9rXZphRh/ch8Aid8iMsiHHdA7wwumsIuNhFb9m1Rz6Ax4KRVDiKZAK100Yge4UirT9A2ThUhjUOw6v+d3tFWK2DE1l75Uh7yziO6S4VFAza2QcXR3N1CYKzTfX/0rS9fWMjUhiZqcpnFHNyQlcSHb6Gj2HzauCqcfSQU7ciQOV19y5jyWKGYj7JjTT8Qzf/ODcxDxmj2fNJAB2Q81ulsISExP9iR0pJ0t7KZARqLfv1GjBoAI1ThM3BbxG11wilDrWXMygUCgmtGlMfgQdrrkf1MJtUfth+2Iq+jt1eiZSssrdNtEkj5+H8jdk9AMAkziOoexm9pUvyurXfB9s5vVMS9/or5EJjlg0Wra7Y9m/L+tnphh6MbOCMWvBzmTKZzgLBnNmodIqHr27yeCR51e0vskxuIStIPKdLGqiAZZVas7OZohc0=+bxctr</div>
             <button class="copy-btn" onclick="copyToClipboard()">📎 Копировать ссылку</button>
         </div>
-        <p><small>✅ Ссылка готова для вставки в приложение HAPP</small></p>
     </div>
 
-    <!-- 2. Настройка подписки + картинка -->
+    <!-- 2. Настройка временной подписки -->
     <div class="card">
         <h2>⚙️ 2. Настройте временную подписку</h2>
         <p>Вставьте скопированную ссылку в приложение HAPP, как показано на картинке:</p>
         <div class="instruction-img">
-            <img src="https://github.com/Jaymz665/proxy-foxy-instruction/blob/main/instructions/3.jpg?raw=true" alt="Вставка ссылки в HAPP">
+            <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/1.jpg?raw=true" alt="Вставка ссылки в HAPP">
         </div>
-        <p class="ping-note">💡 <strong>Совет:</strong> после вставки нажмите «ОК» или «Импорт».</p>
+        <div class="info-note">
+            💡 <strong>Совет:</strong> после вставки нажмите «ОК» или «Импорт».
+        </div>
     </div>
 
-    <!-- 3. Обновить подписку и пинг -->
+    <!-- 3. Настройки приложения -->
     <div class="card">
-        <h2>🔄 3. Обновите подписку и проведите пинг</h2>
-        
-        <h3>📡 Обновите список серверов</h3>
-        <div class="instruction-img">
-            <img src="https://github.com/Jaymz665/proxy-foxy-instruction/blob/main/instructions/4.jpg?raw=true" alt="Обновить сервера">
-        </div>
-
-        <h3>📊 Сделайте тест пинга</h3>
-        <div class="instruction-img">
-            <img src="https://github.com/Jaymz665/proxy-foxy-instruction/blob/main/instructions/5.jpg?raw=true" alt="Тест пинга">
-        </div>
-
-        <ul style="margin: 1rem 0 0 1.5rem;">
-            <li>✅ Выберите сервер с <strong>наименьшей задержкой</strong> (меньше цифры — лучше)</li>
-            <li>✅ Нажмите большую кнопку <strong>«Подключиться»</strong></li>
-            <li>✅ Подтвердите запрос на подключение VPN</li>
+        <h2>🔧 3. Настройте приложение правильно</h2>
+        <ul class="step-list">
+            <li>Перейдите в <strong>настройки</strong></li>
+            <li>Далее в <strong>«Подписки»</strong></li>
+            <li>Убедитесь, что <strong>автообновление</strong> включено</li>
+            <li>Обязательно включите <strong>сортировку по пингу</strong></li>
         </ul>
+        <div class="instruction-img">
+            <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/2.jpg?raw=true" alt="Настройки подписок и сортировка">
+        </div>
     </div>
 
-    <!-- 4. Если интернет не появился -->
+    <!-- 4. Для стабильного подключения -->
     <div class="card">
-        <h2>🔄 4. Если доступа к интернету нет</h2>
-        <p>➡️ Смените сервер из списка и проверьте «текущее соединение»:</p>
+        <h2>📡 4. Для стабильного подключения</h2>
+        <ul class="step-list">
+            <li>Сделайте <strong>пинг серверов</strong></li>
+            <li>Нажмите на <strong>подходящий сервер</strong> (с наименьшей задержкой)</li>
+            <li>Нажмите на кнопку <strong>подключения</strong></li>
+        </ul>
         <div class="instruction-img">
-            <img src="https://github.com/Jaymz665/proxy-foxy-instruction/blob/main/instructions/8.jpg?raw=true" alt="Смена сервера и проверка соединения" style="max-width: 100%;">
+            <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/3.jpg?raw=true" alt="Пинг и подключение">
         </div>
-        <div class="ping-note">
-            ⚠️ Иногда требуется сменить протокол или перезапустить приложение — это нормально.
+
+        <ul class="step-list">
+            <li>Убедитесь, что сервер работает — нажмите <strong>«проверить текущее соединение»</strong></li>
+            <li>Положительный ответ имеет <strong>числовое значение</strong> (например, задержка в мс)</li>
+        </ul>
+        <div class="instruction-img">
+            <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/4.jpg?raw=true" alt="Проверка соединения">
         </div>
     </div>
 
-    <!-- короткий блок полезных советов -->
-    <div class="card" style="background: #0e1622;">
-        <h3>💡 Полезные советы</h3>
-        <ul style="margin-left: 1.2rem;">
-            <li>Если ссылка не открывается — откройте HAPP вручную и вставьте через «Добавить подписку»</li>
-            <li>На iOS/macOS может потребоваться разрешение VPN в настройках</li>
-            <li>Периодически обновляйте подписку заново по той же ссылке</li>
+    <!-- 5. Основная подписка -->
+    <div class="card">
+        <h2>🎫 5. Настройка основной подписки</h2>
+        <ul class="step-list">
+            <li>Для получения основной подписки перейдите в <a href="https://t.me/foxylinker_bot" target="_blank" style="color:#facc15; text-decoration:underline;">нашего бота в Telegram → @foxylinker_bot</a></li>
+            <li>Получите основную подписку, следуя инструкциям бота.</li>
         </ul>
+        <div class="instruction-img">
+            <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/5.jpg?raw=true" alt="Бот и основная подписка">
+        </div>
+        <div class="info-note">
+            🎉 <strong>Поздравляем с доступом к интернету!</strong>
+        </div>
+    </div>
+
+    <!-- Важные замечания -->
+    <div class="card">
+        <h2>⚠️ Важные замечания</h2>
+        <ul style="margin-left: 1.2rem; list-style: none;">
+            <li>• <strong>Не удаляйте временную подписку</strong> — она пригодится, если возникнут проблемы с доступом к интернету и обновлением основной подписки.</li>
+            <li>• Подписка обновляется автоматически по вашей уникальной ссылке, пока вы находитесь в нашем канале.</li>
+            <li>• Обновление происходит в среднем раз в 1–2 часа.</li>
+            <li>• Делайте тест пинга и проверку сервера — программа не сделает это за вас.</li>
+            <li>• В случае вопросов задайте их в нашем канале.</li>
+        </ul>
+        <div class="warning-note">
+            🔁 Автообновление + сортировка по пингу = максимальная стабильность
+        </div>
     </div>
 
     <footer>
         <hr>
-        <p>HAPP Proxy | Инструкция актуальна 2025 • Для обхода блокировок используйте только легальные способы</p>
+        <p>FoxyProxy 🦊 • Актуальная инструкция 2025 • Работаем даже там, где обычный интернет не справляется</p>
+        <p style="margin-top: 6px;">🔗 <a href="https://github.com/foxy-proxy-os/instruction" target="_blank" style="color:#facc15;">Репозиторий с инструкцией</a></p>
     </footer>
 </div>
 
