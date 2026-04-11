@@ -19,7 +19,7 @@ happ://crypt5/hfqaUsMKTR3ZONKm4y181r5XNx13hprjsYpHAQ7DfJ01/G6H739GUEp4MHKiUSerb6
 ```
 ## Настройте временную подписку.
 
-- Вставьте скопированню ссылку в приложение HAPP как показано на картинке
+- Вставьте скопированную ссылку в приложение HAPP как показано на картинке
 <img src="https://github.com/foxy-proxy-os/instruction/blob/main/instructions_image/1.jpg" alt="3" width="50%" height="auto">
 
 ## Настройте приложение правильно.
