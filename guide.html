@@ -13,7 +13,6 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            /* фон: #090909 + градиенты 424448 */
             background: linear-gradient(135deg, #090909 0%, #1a1c22 50%, #090909 100%);
             color: #feefe2;
             line-height: 1.5;
@@ -25,7 +24,6 @@
             margin: 0 auto;
         }
 
-        /* Карточки — окантовка градиентом */
         .card {
             background: rgba(10, 10, 12, 0.75);
             backdrop-filter: blur(4px);
@@ -39,7 +37,6 @@
             position: relative;
         }
 
-        /* градиентная окантовка */
         .card::before {
             content: "";
             position: absolute;
@@ -58,7 +55,6 @@
             transform: translateY(-2px);
         }
 
-        /* Заголовок с градиентом */
         h1 {
             font-size: 1.9rem;
             background: linear-gradient(120deg, #feefe2, #634936, #feefe2);
@@ -99,7 +95,6 @@
             color: #e0c8b5;
         }
 
-        /* Кнопки платформ */
         .platform-grid {
             display: flex;
             flex-wrap: wrap;
@@ -138,45 +133,6 @@
             transform: translateY(-1px);
         }
 
-        /* Блок со ссылкой */
-        .link-box {
-            background: #0d0b0a;
-            border-radius: 1.2rem;
-            padding: 1rem;
-            margin: 1.2rem 0;
-            border: 1px solid #634936;
-            word-break: break-all;
-        }
-
-        .link-url {
-            font-family: 'SF Mono', 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: #e0c8b5;
-            background: #00000060;
-            padding: 0.6rem;
-            border-radius: 1rem;
-            display: block;
-            margin-bottom: 0.8rem;
-        }
-
-        .copy-btn {
-            background: linear-gradient(135deg, #634936, #26150e);
-            border: none;
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
-            color: #feefe2;
-            font-weight: bold;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: 0.15s;
-        }
-
-        .copy-btn:active {
-            background: linear-gradient(135deg, #4a3526, #1a0f0a);
-            transform: scale(0.96);
-        }
-
-        /* картинки */
         .instruction-img {
             margin: 1.2rem 0;
             text-align: center;
@@ -223,7 +179,6 @@
             font-weight: bold;
         }
 
-        /* Кастомные списки для Android раздела */
         .custom-list {
             margin: 1rem 0 0 1.2rem;
             list-style: none;
@@ -273,7 +228,6 @@
             color: #e0c8b5;
         }
 
-        /* для мобилок */
         @media (max-width: 640px) {
             .instruction-img img {
                 width: 90%;
@@ -302,13 +256,13 @@
             <a href="https://apps.apple.com/ru/app/happ-proxy-utility/id6783623643" target="_blank" class="btn">📱 iOS/macOS</a>
         </div>
 
-        <!-- ЗАМЕНЁННАЯ СЕКЦИЯ: вместо ссылки теперь текст с ВК -->
-        <p><strong>Если у вас нет возможности войти в телеграмм, вы можете запросить временную подписку в нашей группе в ВК:</strong></p>
-        <p style="margin-top: 0.5rem;">
-            <a href="https://vk.com/foxy_internet" target="_blank" style="color: #feefe2; text-decoration: underline; font-size: 1.1rem;">
-                https://vk.com/foxy_internet
+        <!-- Заменённая секция — теперь кнопка ВК -->
+        <p><strong>Если у вас нет VPN, вы можете запросить временную подписку в нашей группе в ВК:</strong></p>
+        <div style="margin-top: 0.8rem;">
+            <a href="https://vk.com/foxy_internet" target="_blank" class="btn btn-primary" style="display: inline-flex; text-decoration: none;">
+                ВК — Foxy — интернет
             </a>
-        </p>
+        </div>
     </div>
 
     <!-- 2. Настройка временной подписки -->
@@ -385,7 +339,7 @@
         </div>
     </div>
 
-    <!-- ⭐ НОВЫЙ РАЗДЕЛ: Инструкция по настройке Android для стабильной фоновой работы -->
+    <!-- Android настройки -->
     <div class="card">
         <h2>📱 Android: настройка фоновой работы и автообновления</h2>
         <p><strong>🔄 Не работает автообновление?</strong> Многие в режиме «белых списков» (особенно при ограничениях операторов) сталкиваются с тем, что Android агрессивно ограничивает фоновую активность приложений. Из-за этого Happ не может получать автоматические обновления серверов, и подписка перестаёт обновляться вовремя.</p>
@@ -439,7 +393,5 @@
         <p>FoxyProxy 🦊 • Актуальная инструкция 2026 • Работаем даже там, где обычный интернет не справляется</p>
     </footer>
 </div>
-
-<!-- Скрипт копирования удалён, так как ссылка больше не требуется -->
 </body>
 </html>
